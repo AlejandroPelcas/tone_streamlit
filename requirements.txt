@@ -3,7 +3,6 @@ jupyter==1.0.0
 kaggle==1.5.12
 keras==2.9.0
 Keras-Preprocessing==1.1.2
-numpy @ file:///opt/concourse/worker/volumes/live/84716fc3-63c0-4ad6-5a23-37f5ad6b3bfa/volume/numpy_and_numpy_base_1618497240837/work
 pandas==1.4.2
 pandas-profiling==3.1.0
 
