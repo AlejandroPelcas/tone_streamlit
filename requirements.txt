@@ -6,7 +6,6 @@ Keras-Preprocessing==1.1.2
 pandas==1.4.2
 pandas-profiling==3.1.0
 
-pickleshare @ file:///tmp/build/80754af9/pickleshare_1606932040724/work
 scikit-image==0.18.1
 scikit-learn @ file:///opt/concourse/worker/volumes/live/0c77b068-a026-4996-6842-33e5544ec13b/volume/scikit-learn_1614446667823/work
 scipy @ file:///opt/concourse/worker/volumes/live/7d10d993-3825-404e-6e5d-9947c19e8c6d/volume/scipy_1618855951189/work
