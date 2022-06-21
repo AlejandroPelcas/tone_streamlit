@@ -6,26 +6,14 @@ Keras-Preprocessing==1.1.2
 pandas==1.4.2
 pandas-profiling==3.1.0
 
-scikit-image==0.18.1
-scikit-learn @ file:///opt/concourse/worker/volumes/live/0c77b068-a026-4996-6842-33e5544ec13b/volume/scikit-learn_1614446667823/work
-scipy @ file:///opt/concourse/worker/volumes/live/7d10d993-3825-404e-6e5d-9947c19e8c6d/volume/scipy_1618855951189/work
-seaborn @ file:///tmp/build/80754af9/seaborn_1608578541026/work
+
 
 streamlit==1.9.2
 streamlit-lottie==0.0.3
 
-tensorboard==2.9.1
-tensorboard-data-server==0.6.1
-tensorboard-plugin-wit==1.8.0
-tensorflow==2.9.1
-tensorflow-estimator==2.9.0
-tensorflow-io-gcs-filesystem==0.26.0
-termcolor==1.1.0
-terminado==0.9.4
 
-tifffile==2020.10.1
+
 tokenizers==0.12.1
-transformers==4.19.2
 txt2tags==3.7
 virtualenv==20.13.1
 visions==0.7.4
