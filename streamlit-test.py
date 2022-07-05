@@ -14,11 +14,18 @@ with header:
     st.title("Welcome to our Capstone Project!")
 
 with dataset:
-    st.header("We are using the Sentiment140 dataset with over 1.6 million tweets")
-    st.text("Our  dataset is scrapped from twitter... and its cool! Take a look")
+    st.header("We are team Tone. ")
+    st.text("Our  dataset is composed of 24,000 tweets. Take a look")
     data = pd.read_csv("/Users/alejandropelcastre/Documents/capstone/data/text_emotion.csv", encoding = "ISO-8859-1")
 
     st.write(data.head())
+########
+    sentence = st.text_input('Input your sentence here:')
+
+if sentence:
+    st.write(my_model.predict(sentence))
+
+########
 
     #train models
     from sklearn.model_selection import train_test_split
