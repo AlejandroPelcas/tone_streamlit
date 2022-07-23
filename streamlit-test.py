@@ -14,7 +14,7 @@ models = st.container()
 with header:
     #Insert  Title
     st.title("Welcome to our Capstone Project!")
-    image = Image.open('tone_logo.png')
+    image = Image.open('tone_log.png')
     st.image(image, caption = "Toning down the bad vibes")
 
 with dataset:
