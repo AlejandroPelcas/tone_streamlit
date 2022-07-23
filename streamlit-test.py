@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from streamlit_lottie import st_lottie
 import json
 import requests
+from PIL import Image
 
 header = st.container()
 dataset = st.container()
