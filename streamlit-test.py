@@ -27,7 +27,7 @@ with dataset:
     st.text("Our dataset is composed of 24,000 tweets. Here, take a look")
     data = pd.read_csv("multi_label_new.csv", encoding = "ISO-8859-1")
     st.write(data.head())
-    sentence = st.text_input('Input your sentence here:')
+    sentence = st.text_input('Input your sentence here:', key = 7)
 ######## try html/java
 components.html(
     """
