@@ -23,17 +23,16 @@ with dataset:
     sentence = st.text_input('Input your sentence here:')
     if sentence:
         st.write(my_model.predict(sentence))
-    st.text("""The data is composed of 24,000 tweets from the kaggle dataset, 
-    Hate Speech and Offensive Language Dataset. It was conceived to be used to research hate speech such
+    st.text("""The data is composed of 24,000 tweets from the kaggle dataset, Hate Speech and Offensive Language Dataset. It was conceived to be used to research hate speech such
     as racial, homophobic, sexist, and general offensive language. The origional dataset origionally had
     the following columns: hate_speech, offensive_language, and neither. We added more columns. Here, take a look""")
     data = pd.read_csv("multi_label_new.csv", encoding = "ISO-8859-1")
     this_list = [
             ['Task', 'Hours per Day'],
-            ['LGBTQ+ Phobic',      0.7],
+            ['LGBTQ+ Phobic',      0.5],
             ['Sexism',  0.1],
-            ['Racial Prejudice', 0.1],
-            ['Disability Discrimination',    0.1]
+            ['Racial Prejudice', 0.2],
+            ['Disability Discrimination',    0.2]
           ]
     st.write(data.head())
 
