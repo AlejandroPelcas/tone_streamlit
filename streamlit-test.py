@@ -68,7 +68,7 @@ components.html(
     height=600,
 )
 
-    #get animations
+""" #get animations
     def load_lottiefile(filepath: str):
         with open(filepath, "r") as f:
             return json.load(f)
@@ -91,3 +91,4 @@ components.html(
     width=300,
     key=None,
     )
+"""
