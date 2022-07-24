@@ -31,29 +31,32 @@ with dataset:
 ######## try html/java
 components.html(
     """
-    <body>
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="jquery-3.3.1.js"></script>
-    <div class="wrapper">
-    <div class="pie-charts">
-        <div class="pieID--operations pie-chart--wrapper">
-        <p align="left"><h2>Tone Representation</h2>
-        <div class="pie-chart">
-            <div class="pie-chart__pie"></div>
-            <ul class="pie-chart__legend">
-            <li><em>LGBTQ+ Phobic</em><span>0.50</span></li>
-            <li><em>Sexism</em><span>0.30</span></li>
-            <li><em>Racial Prejudice</em><span>0.10</span></li>
-            <li><em>Disability discrimination</em><span>0.10</span></li>
-            </ul>
-        </div>
-        </div>
-        </div>
-        </div>
+    <div class="donut-chart", style = "position:relative; left:700px; top:-360px; background-color: transparent;">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['LGBTQ+ Phobic',      106],
+            ['Sexism',  736],
+            ['Racial Prejudice', 115],
+            ['Disability Discrimination',    43]
+          ]);
 
-    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-    <script src='https://codepen.io/MaciejCaputa/pen/EmMooZ.js'></script><script  src="./chart.js"></script>
-    </body>
+          var options = {
+            title: 'Tone Representation',
+            pieHole: 0.4,
+            colors: ['#36d8ff', '#529ffc', '#31356e', '#66757f']
+          };
+
+          var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div id="donutchart" style="width: 700px; height: 350px;"></div></p>
+</div>
     """,
     height=600,
 )
