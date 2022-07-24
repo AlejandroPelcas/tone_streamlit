@@ -31,7 +31,8 @@ with dataset:
 ######## try html/java
 components.html(
     """
-    <div class="donut-chart", style = "position:relative; left:700px; top:-360px; background-color: transparent;">
+    <section>
+    <div class="donut-chart", style = "position:relative; background-color: transparent;">
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
       <script type="text/javascript">
         google.charts.load("current", {packages:["corechart"]});
@@ -56,7 +57,8 @@ components.html(
         }
       </script>
       <div id="donutchart" style="width: 700px; height: 350px;"></div></p>
-</div>
+    </div>
+    </section>
     """,
     height=600,
 )
