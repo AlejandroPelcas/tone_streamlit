@@ -31,6 +31,7 @@ with dataset:
 ######## try html/java
 components.html(
     """
+    <body>
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="jquery-3.3.1.js"></script>
     <div class="wrapper">
@@ -52,7 +53,7 @@ components.html(
 
     <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
     <script src='https://codepen.io/MaciejCaputa/pen/EmMooZ.js'></script><script  src="./chart.js"></script>
-
+    </body>
     """,
     height=600,
 )
