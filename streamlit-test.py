@@ -45,7 +45,7 @@ components.html(
         google.charts.load("current", {packages:["corechart"]});
         google.charts.setOnLoadCallback(drawChart);
         function drawChart() {
-          var data = google.visualization.arrayToDataTable(""" + this_list + """);
+          var data = google.visualization.arrayToDataTable(""" + str(this_list) + """);
 
           var options = {
             title: 'Tone Representation',
