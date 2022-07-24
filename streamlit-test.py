@@ -26,9 +26,16 @@ with dataset:
     st.header("Our Data:")
     st.text("Our dataset is composed of 24,000 tweets. Here, take a look")
     data = pd.read_csv("multi_label_new.csv", encoding = "ISO-8859-1")
+    this_list = [
+            ['Task', 'Hours per Day'],
+            ['LGBTQ+ Phobic',      0.7],
+            ['Sexism',  0.1],
+            ['Racial Prejudice', 0.1],
+            ['Disability Discrimination',    0.1]
+          ]
     st.write(data.head())
-    sentence = st.text_input('Input your sentence here:', key = 7)
-######## try html/java
+
+#Writes the html/css/javascript: Mostly for the donut chart
 components.html(
     """
     <section>
@@ -38,13 +45,7 @@ components.html(
         google.charts.load("current", {packages:["corechart"]});
         google.charts.setOnLoadCallback(drawChart);
         function drawChart() {
-          var data = google.visualization.arrayToDataTable([
-            ['Task', 'Hours per Day'],
-            ['LGBTQ+ Phobic',      106],
-            ['Sexism',  736],
-            ['Racial Prejudice', 115],
-            ['Disability Discrimination',    43]
-          ]);
+          var data = google.visualization.arrayToDataTable(""" + this_list + """);
 
           var options = {
             title: 'Tone Representation',
