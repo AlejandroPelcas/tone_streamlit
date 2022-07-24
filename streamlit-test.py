@@ -22,7 +22,7 @@ with dataset:
     if sentence:
         st.write(my_model.predict(sentence))
     st.header("We are team Tone.")
-    st.text("Our dataset is composed of 24,000 tweets. Take a look")
+    st.text("Our dataset is composed of 24,000 tweets. Here, take a look")
     data = pd.read_csv("multi_label_new.csv", encoding = "ISO-8859-1")
     st.write(data.head())
 
