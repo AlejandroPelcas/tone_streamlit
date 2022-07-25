@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import os
 import matplotlib.pyplot as plt
 from streamlit_lottie import st_lottie
 import json
@@ -128,8 +129,11 @@ def get_model_predictions(tweet):
     loaded_model = TweetTagger(n_classes=6,
                            n_warmup_steps=140,
                            n_training_steps=703)
-
-    loaded_model.load_state_dict(torch.load('pytorch_model.pth'))
+    
+    cwd = os.getcwd() # getting current working directory
+    print('This is the Current Directory: ')
+    print(cwd + '/pytorch_model.pth')
+    loaded_model.load_state_dict(torch.load(cwd + '/pytorch_model.pth'))
     loaded_model.eval()
 
     BERT_MODEL_NAME = 'bert-base-cased'
