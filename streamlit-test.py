@@ -10,9 +10,9 @@ import streamlit as st
 import streamlit.components.v1 as components
 import subprocess
 import sys
-def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-install(torch)
+from pip._internal import main as pipmain
+
+pipmain(['install', "torch"])
 
 # from model import *
 #######3#model.py##########
