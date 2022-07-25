@@ -10,6 +10,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 header = st.container()
+mission = st.container()
 dataset = st.container()
 models = st.container()
 
@@ -18,6 +19,10 @@ with header:
     st.title("Welcome to our Capstone Project!")
     image = Image.open('tone_log.png')
     st.image(image, caption = "Toning down the bad vibes")
+
+with mission:
+    st.title("Mission Statement")
+    st.text("Promoting empathy among Twitter Users to reduce offensive content that harms the wellness of users.")
 
 with dataset:
     sentence = st.text_input('Input your sentence here:')
@@ -34,7 +39,7 @@ with dataset:
             ['Racial Prejudice', 0.2],
             ['Disability Discrimination',    0.2]
           ]
-    st.write(data.head())
+    st.write(data.tail())
 
 #Writes the html/css/javascript: Mostly for the donut chart
 components.html(
