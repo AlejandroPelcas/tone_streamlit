@@ -33,8 +33,7 @@ pipmain(['install', "torch"])
 # import torch.nn as nn
 # from torch.utils.data import Dataset, DataLoader
 # from transformers import BertTokenizerFast as BertTokenizer, BertModel, AdamW, get_linear_schedule_with_warmup
-
-# import pytorch_lightning as pl
+import pytorch_lightning as pl
 # from torchmetrics.functional import accuracy, auroc
 # from torchmetrics.functional import f1_score
 # from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
@@ -55,7 +54,7 @@ pipmain(['install', "torch"])
 # rcParams['figure.figsize'] = 12, 8
 # pl.seed_everything(RANDOM_SEED)
 
-class TweetTagger(pytorch_lightning.LightningModule):
+class TweetTagger(pl.LightningModule):
   def __init__(self, n_classes: int, n_training_steps=None, n_warmup_steps=None):
     super().__init__()
     self.bert = BertModel.from_pretrained('bert-base-cased', return_dict=True)
