@@ -129,7 +129,7 @@ def get_model_predictions(tweet):
                            n_warmup_steps=140,
                            n_training_steps=703)
 
-    loaded_model.load_state_dict(torch.load('./pytorch_model.pth'))
+    loaded_model.load_state_dict(torch.load('pytorch_model.pth'))
     loaded_model.eval()
 
     BERT_MODEL_NAME = 'bert-base-cased'
