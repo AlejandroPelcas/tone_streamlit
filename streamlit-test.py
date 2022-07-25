@@ -8,7 +8,7 @@ import requests
 from PIL import Image
 import streamlit as st
 import streamlit.components.v1 as components
-import model
+from model import get_model_predictions
 #from flask import Flask
 
 
