@@ -1,44 +1,44 @@
 # Pip Installing Dependencies
-!pip install torch -q
+# !pip install torch -q
 import sys
-!pip install watermark -q
-!pip install transformers -q
-!pip install --upgrade pytorch-lightning -q
-!pip install colored -q
-!pip install -U -q PyDrive -q
+# !pip install watermark -q
+# !pip install transformers -q
+# !pip install --upgrade pytorch-lightning -q
+# !pip install colored -q
+# !pip install -U -q PyDrive -q
 
 # Import Packages
-import pandas as pd
-import numpy as np
-from tqdm.auto import tqdm
-import torch
+# import pandas as pd
+# import numpy as np
+# from tqdm.auto import tqdm
+# import torch
 
-import torchmetrics
-import torch.nn as nn
-from torch.utils.data import Dataset, DataLoader
-from transformers import BertTokenizerFast as BertTokenizer, BertModel, AdamW, get_linear_schedule_with_warmup
+# import torchmetrics
+# import torch.nn as nn
+# from torch.utils.data import Dataset, DataLoader
+# from transformers import BertTokenizerFast as BertTokenizer, BertModel, AdamW, get_linear_schedule_with_warmup
 
-import pytorch_lightning as pl
-from torchmetrics.functional import accuracy, auroc
-from torchmetrics.functional import f1_score
-from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
-from pytorch_lightning.loggers import TensorBoardLogger
+# import pytorch_lightning as pl
+# from torchmetrics.functional import accuracy, auroc
+# from torchmetrics.functional import f1_score
+# from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
+# from pytorch_lightning.loggers import TensorBoardLogger
 
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report, multilabel_confusion_matrix
-import seaborn as sns
-from pylab import rcParams
-import matplotlib.pyplot as plt
-from matplotlib import rc
+# from sklearn.model_selection import train_test_split
+# from sklearn.metrics import classification_report, multilabel_confusion_matrix
+# import seaborn as sns
+# from pylab import rcParams
+# import matplotlib.pyplot as plt
+# from matplotlib import rc
 
-%matplotlib inline
-%config InlineBackend.figure_format='retina'
-RANDOM_SEED = 42
-sns.set(style='whitegrid', palette='muted', font_scale=1.2)
-HAPPY_COLORS_PALETTE = ["#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF"]
-sns.set_palette(sns.color_palette(HAPPY_COLORS_PALETTE))
-rcParams['figure.figsize'] = 12, 8
-pl.seed_everything(RANDOM_SEED)
+# %matplotlib inline
+# %config InlineBackend.figure_format='retina'
+# RANDOM_SEED = 42
+# sns.set(style='whitegrid', palette='muted', font_scale=1.2)
+# HAPPY_COLORS_PALETTE = ["#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF"]
+# sns.set_palette(sns.color_palette(HAPPY_COLORS_PALETTE))
+# rcParams['figure.figsize'] = 12, 8
+# pl.seed_everything(RANDOM_SEED)
 
 class TweetTagger(pl.LightningModule):
   def __init__(self, n_classes: int, n_training_steps=None, n_warmup_steps=None):
