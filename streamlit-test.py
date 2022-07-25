@@ -8,11 +8,16 @@ import requests
 from PIL import Image
 import streamlit as st
 import streamlit.components.v1 as components
+import subprocess
+import sys
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+install(torch)
+
 # from model import *
 #######3#model.py##########
 # Pip Installing Dependencies
 # !pip install torch -q
-import sys
 # !pip install watermark -q
 # !pip install transformers -q
 # !pip install --upgrade pytorch-lightning -q
