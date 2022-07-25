@@ -13,6 +13,9 @@ import sys
 from pip._internal import main as pipmain
 
 pipmain(['install', "torch"])
+pipmain(['install', "torchmetrics"])
+pipmain(['install', "pytorch_lightning"])
+pipmain(['install', "pylab"])
 
 # from model import *
 #######3#model.py##########
@@ -28,21 +31,21 @@ pipmain(['install', "torch"])
 # import pandas as pd
 # import numpy as np
 # from tqdm.auto import tqdm
-# import torch
-# import torchmetrics
-# import torch.nn as nn
-# from torch.utils.data import Dataset, DataLoader
-# from transformers import BertTokenizerFast as BertTokenizer, BertModel, AdamW, get_linear_schedule_with_warmup
+import torch
+import torchmetrics
+import torch.nn as nn
+from torch.utils.data import Dataset, DataLoader
+from transformers import BertTokenizerFast as BertTokenizer, BertModel, AdamW, get_linear_schedule_with_warmup
 import pytorch_lightning as pl
-# from torchmetrics.functional import accuracy, auroc
-# from torchmetrics.functional import f1_score
-# from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
-# from pytorch_lightning.loggers import TensorBoardLogger
+from torchmetrics.functional import accuracy, auroc
+from torchmetrics.functional import f1_score
+from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
+from pytorch_lightning.loggers import TensorBoardLogger
 
 # from sklearn.model_selection import train_test_split
 # from sklearn.metrics import classification_report, multilabel_confusion_matrix
 # import seaborn as sns
-# from pylab import rcParams
+from pylab import rcParams
 # from matplotlib import rc
 
 # %matplotlib inline
