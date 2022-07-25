@@ -55,7 +55,7 @@ pipmain(['install', "torch"])
 # rcParams['figure.figsize'] = 12, 8
 # pl.seed_everything(RANDOM_SEED)
 
-class TweetTagger(pl.LightningModule):
+class TweetTagger(pytorch_lightning.LightningModule):
   def __init__(self, n_classes: int, n_training_steps=None, n_warmup_steps=None):
     super().__init__()
     self.bert = BertModel.from_pretrained('bert-base-cased', return_dict=True)
