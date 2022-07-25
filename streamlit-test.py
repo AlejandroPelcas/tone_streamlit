@@ -16,6 +16,7 @@ pipmain(['install', "torch"])
 pipmain(['install', "torchmetrics"])
 pipmain(['install', "pytorch_lightning"])
 pipmain(['install', "pylab"])
+pipmain(['install', "transformers"])
 
 # from model import *
 #######3#model.py##########
