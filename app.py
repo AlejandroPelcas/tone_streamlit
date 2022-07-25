@@ -22,7 +22,7 @@ def main():
     else:
         prediction = "No Tweet"
 
-    return render_template("tweet_index.html", output = prediction)
+    return render_template("index.html", output = prediction)
 #Run the App
 if __name__ == "__main__":
     app.run(debug = True)

@@ -8,6 +8,11 @@ import requests
 from PIL import Image
 import streamlit as st
 import streamlit.components.v1 as components
+from flask import Flask
+
+#flask stuff
+app = Flask(__name__)
+
 
 header = st.container()
 mission = st.container()
@@ -39,7 +44,7 @@ with dataset:
             ['Racial Prejudice', 0.2],
             ['Disability Discrimination',    0.2]
           ]
-    st.write(data.tail())
+    st.write(data.tail(10))
 
 #Writes the html/css/javascript: Mostly for the donut chart
 components.html(
@@ -69,6 +74,11 @@ components.html(
     """,
     height=600,
 )
+
+if __name__ == '__main__':
+    # run() method of Flask class runs the application
+    # on the local development server.
+    app.run()
 
 """ #get animations
     def load_lottiefile(filepath: str):
