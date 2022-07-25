@@ -10,8 +10,6 @@ import streamlit as st
 import streamlit.components.v1 as components
 #from flask import Flask
 
-#flask stuff
-app = Flask(__name__)
 
 
 header = st.container()
@@ -75,10 +73,6 @@ components.html(
     height=600,
 )
 
-if __name__ == '__main__':
-    # run() method of Flask class runs the application
-    # on the local development server.
-    app.run()
 
 """ #get animations
     def load_lottiefile(filepath: str):
