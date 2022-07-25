@@ -8,6 +8,7 @@ import requests
 from PIL import Image
 import streamlit as st
 import streamlit.components.v1 as components
+import model
 #from flask import Flask
 
 
@@ -43,6 +44,8 @@ with dataset:
             ['Disability Discrimination',    0.2]
           ]
     st.write(data.tail(10))
+    pred = model.get_model_predictions("I hate james a lot")
+    st.text(pred)
 
 #Writes the html/css/javascript: Mostly for the donut chart
 components.html(
