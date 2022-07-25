@@ -8,7 +8,7 @@ import requests
 from PIL import Image
 import streamlit as st
 import streamlit.components.v1 as components
-from flask import Flask
+#from flask import Flask
 
 #flask stuff
 app = Flask(__name__)
