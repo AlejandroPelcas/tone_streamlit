@@ -171,7 +171,7 @@ with header:
     st.image(image, caption = "Toning down the bad vibes")
 
 with mission:
-    st.title("Mission Statement")
+    st.title("Mission Statement:")
     st.text("Promoting empathy among Twitter Users to reduce offensive content that harms the wellness of users")
 
 with dataset:
