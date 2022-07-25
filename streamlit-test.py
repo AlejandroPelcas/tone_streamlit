@@ -172,7 +172,7 @@ with header:
 
 with mission:
     st.title("Mission Statement")
-    st.text("Promoting empathy among Twitter Users to reduce offensive content that harms the wellness of users.")
+    st.text("Promoting empathy among Twitter Users to reduce offensive content that harms the wellness of users")
 
 with dataset:
     sentence = st.text_input('Input your sentence here:')
