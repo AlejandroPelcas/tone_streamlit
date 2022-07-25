@@ -175,6 +175,11 @@ with dataset:
     if sentence:
         answer = get_model_predictions(sentence)
         st.write(answer)
+    else:
+        answer = [['Neutral', 1.0], ['General Criticism', 0],
+        ['Disability Shaming', 0], ['Sexism', 0],
+        ['Racial Prejudice', 0], ['LGBTQ+ Phobia', 0]
+        ]
     st.text("""The data is composed of 24,000 tweets from the kaggle dataset, Hate Speech and Offensive Language Dataset. It was conceived to be used to research hate speech such
     as racial, homophobic, sexist, and general offensive language. The origional dataset origionally had
     the following columns: hate_speech, offensive_language, and neither. We added more columns. Here, take a look""")
