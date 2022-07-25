@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import os
+#import os
 import matplotlib.pyplot as plt
 from streamlit_lottie import st_lottie
 import json
@@ -132,7 +132,7 @@ def get_model_predictions(tweet):
     
     #cwd = os.getcwd() # getting current working directory
     #print('This is the Current Directory: ')
-    p#rint(cwd + '/pytorch_model.pth')
+    #print(cwd + '/pytorch_model.pth')
     loaded_model.load_state_dict(torch.load('./pytorch_model.pth'))
     loaded_model.eval()
 
